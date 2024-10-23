@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="concatco.css">
+    <title>KS</title>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <img src="img/logo.png" alt="Logo">
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Incio</a></li>
+                <li><a href="tienda.html">Tienda</a></li>
+                <li><a href="ediion.html">!edicion Especial¡</a></li>
+                <li><a href="conctacto.html">Conctacto</a></li>
+            </ul>
+            <div class="icons">
+                <div class="icon-wrapper">
+                    <a href="#buscar"><img src="img/lupa.png" alt="Buscar"></a>
+                    <span class="tooltip">Buscar</span>
+                </div>
+                <div class="icon-wrapper">
+                    <a href="#cuenta"><img src="img/persona.png" alt="Cuenta"></a>
+                    <span class="tooltip">Cuenta</span>
+                </div>
+                <div class="icon-wrapper">
+                    <a href="#favoritos"><img src="img/corazon.png" alt="Favoritos"></a>
+                    <span class="tooltip">Favoritos</span>
+                </div>
+                <div class="icon-wrapper">
+                    <a href="#carrito"><img src="img/carrito.png" alt="Carrito"></a>
+                    <span class="tooltip">Carrito</span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+
+
+
+
+
+    <form id="contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST" onsubmit="clearForm()">
+        <label for="name">Nombre:</label>
+        <input type="text" id="name" name="name" required>
+    
+        <label for="email">Correo electrónico:</label>
+        <input type="email" id="email" name="email" required>
+    
+        <label for="phone">Número de teléfono:</label>
+        <input type="tel" id="phone" name="phone" required>
+    
+        <label for="reason">Motivo de contacto:</label>
+        <select id="reason" name="reason" required>
+            <option value="" disabled selected>Selecciona una opción</option>
+            <option value="consulta">Consulta</option>
+            <option value="sugerencia">Sugerencia</option>
+            <option value="soporte">Soporte</option>
+            <option value="otro">Otro</option>
+        </select>
+    
+        <label for="message">Mensaje:</label>
+        <textarea id="message" name="message" required></textarea>
+    
+        <button type="submit">Enviar</button>
+    </form>
+    
+    
+    
+    <script src="scrpits.js"></script>
+</body>
+</html>

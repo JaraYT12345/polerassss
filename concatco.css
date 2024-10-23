@@ -1,0 +1,111 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 30px;
+    background-color: #f8f8f8;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.logo img {
+    height: 50px; /* Ajusta según el tamaño deseado */
+    width: 50px; /* Asegúrate de que el ancho sea igual al alto */
+    border-radius: 50%; /* Hace que la imagen sea redonda */
+    object-fit: cover; /* Asegura que la imagen se recorte correctamente */
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.nav-links li a:hover {
+    color: #007BFF; /* Color que se desea al pasar el ratón */
+    transform: translateY(-2px); /* Levanta ligeramente el enlace */
+}
+
+.icons {
+    display: flex;
+    gap: 15px;
+    position: relative; /* Para que el tooltip se posicione correctamente */
+}
+
+.icon-wrapper {
+    position: relative;
+}
+
+.icons a img {
+    height: 24px; /* Ajusta según el tamaño de tus iconos */
+    transition: transform 0.2s ease;
+}
+
+.icons a:hover img {
+    transform: scale(1.1); /* Aumenta el tamaño del icono al pasar el ratón */
+}
+
+.tooltip {
+    display: none;
+    position: absolute;
+    bottom: -25px; /* Ajusta la posición del tooltip */
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #333;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 12px;
+    white-space: nowrap;
+    z-index: 10; /* Para asegurarte de que se muestre por encima */
+}
+
+.icon-wrapper:hover .tooltip {
+    display: block; /* Muestra el tooltip al pasar el ratón */
+}
+
+
+
+
+form {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    margin: auto;
+}
+
+label {
+    margin-top: 10px;
+}
+
+input, textarea, select {
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #25D366; /* Color verde de WhatsApp */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #1DAE6D; /* Color verde más oscuro */
+}

@@ -1,0 +1,331 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 30px;
+    background-color: #f8f8f8;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.logo img {
+    height: 50px; /* Ajusta según el tamaño deseado */
+    width: 50px; /* Asegúrate de que el ancho sea igual al alto */
+    border-radius: 50%; /* Hace que la imagen sea redonda */
+    object-fit: cover; /* Asegura que la imagen se recorte correctamente */
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.nav-links li a:hover {
+    color: #007BFF; /* Color que se desea al pasar el ratón */
+    transform: translateY(-2px); /* Levanta ligeramente el enlace */
+}
+
+.icons {
+    display: flex;
+    gap: 15px;
+    position: relative; /* Para que el tooltip se posicione correctamente */
+}
+
+.icon-wrapper {
+    position: relative;
+}
+
+.icons a img {
+    height: 24px; /* Ajusta según el tamaño de tus iconos */
+    transition: transform 0.2s ease;
+}
+
+.icons a:hover img {
+    transform: scale(1.1); /* Aumenta el tamaño del icono al pasar el ratón */
+}
+
+.tooltip {
+    display: none;
+    position: absolute;
+    bottom: -25px; /* Ajusta la posición del tooltip */
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #333;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 12px;
+    white-space: nowrap;
+    z-index: 10; /* Para asegurarte de que se muestre por encima */
+}
+
+.icon-wrapper:hover .tooltip {
+    display: block; /* Muestra el tooltip al pasar el ratón */
+}
+
+
+
+
+
+
+
+.titulo{
+    text-align: center;
+    
+  }
+  
+  
+  
+  
+  
+  
+  .info-section {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 20px;
+      max-width: 1000px;
+      width: 100%;
+      background-color: #fff;
+      border-radius: 10px;
+      padding: 20px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .info-image {
+      width: 50%;
+      max-width: 350px;
+      border-radius: 10px;
+      margin-right: 20px;
+  }
+  
+  .info-text {
+      width: 50%;
+  }
+  
+  .info-text h2 {
+      font-size: 2rem;
+      margin-bottom: 10px;
+      color: #007bff;
+  }
+  
+  .info-text p {
+      font-size: 1rem;
+      color: #555;
+  }
+  
+  /* Responsividad */
+  @media (max-width: 768px) {
+      .info-section {
+          flex-direction: column;
+          text-align: center;
+      }
+  
+      .info-image {
+          margin-right: 0;
+          margin-bottom: 20px;
+          width: 80%;
+      }
+  
+      .info-text {
+          width: 80%;
+      }
+  }
+  
+  /* Animaciones */
+  @keyframes fadeIn {
+      from {
+          opacity: 0;
+      }
+      to {
+          opacity: 1;
+      }
+  }
+
+
+  .marquee {
+    overflow: hidden; /* Oculta el contenido que sale del contenedor */
+    white-space: nowrap; /* Evita que el texto se divida en líneas */
+    border: 2px solid #080808; /* Borde de color amarillo */
+    background-color: #fff; /* Fondo blanco */
+    margin: 0px 0; /* Margen superior e inferior */
+    position: relative; /* Para posicionar el contenido dentro */
+    font-size: 1.5em; /* Tamaño de fuente general del marquee */
+}
+
+.marquee-content {
+    display: flex; /* Para alinear los párrafos horizontalmente */
+    animation: marquee 10s linear infinite; /* Animación continua */
+}
+
+.marquee-content p {
+    padding: 10px 20px; /* Espaciado interno */
+    margin: 0; /* Sin margen */
+    font-size: 2em; /* Tamaño de fuente para las frases */
+}
+
+@keyframes marquee {
+    0% { transform: translateX(100%); } /* Comienza desde la derecha */
+    100% { transform: translateX(-100%); } /* Termina a la izquierda */
+}
+
+
+
+
+
+
+
+
+.productos {
+    margin: 40px 20px; /* Margen alrededor de la sección */
+}
+
+.productos h2 {
+    font-size: 2em; /* Tamaño de fuente del encabezado */
+    color: #333; /* Color del texto */
+    margin-bottom: 20px; /* Margen inferior del encabezado */
+}
+
+.producto-grid {
+    display: flex; /* Usar flexbox para alinear los productos */
+    justify-content: space-between; /* Espacio entre los productos */
+    flex-wrap: wrap; /* Permitir que los elementos se envuelvan */
+}
+
+.producto {
+    background-color: #f9f9f9; /* Color de fondo para cada producto */
+    border: 1px solid #ddd; /* Borde de cada producto */
+    border-radius: 10px; /* Bordes redondeados */
+    width: 23%; /* Ancho de cada producto */
+    margin-bottom: 20px; /* Margen inferior entre filas */
+    text-align: center; /* Centrar texto dentro del cuadrado */
+    padding: 10px; /* Espaciado interno */
+    transition: transform 0.3s ease; /* Efecto de transformación */
+}
+
+.producto:hover {
+    transform: scale(1.05); /* Aumenta el tamaño al pasar el ratón */
+}
+
+.producto img {
+    max-width: 100%; /* Imagen se ajusta al tamaño del cuadrado */
+    height: auto; /* Mantiene la proporción de la imagen */
+    border-radius: 10px; /* Bordes redondeados para la imagen */
+}
+
+.producto p {
+    margin-top: 10px; /* Margen superior para la descripción */
+    color: #555; /* Color del texto de la descripción */
+}
+
+.btn-comprar {
+    display: inline-block; /* Para que el botón tenga un contorno */
+    margin-top: 10px; /* Margen superior del botón */
+    padding: 10px 20px; /* Espaciado dentro del botón */
+    background-color: #00d2f7; /* Color amarillo del botón */
+    color: #333; /* Color del texto del botón */
+    text-decoration: none; /* Sin subrayado */
+    border-radius: 5px; /* Bordes redondeados */
+    transition: background-color 0.3s ease; /* Efecto suave al cambiar el color */
+}
+
+.btn-comprar:hover {
+    background-color: #5900ff; /* Color al pasar el ratón sobre el botón */
+}
+
+
+
+
+
+.separator {
+    border: 0; /* Sin borde */
+    height: 2px; /* Altura de la línea */
+    background-color: #ddd; /* Color de la línea */
+    margin: 0px 0; /* Margen superior e inferior */
+}
+.items {
+    display: flex; /* Usar flexbox para alinear los ítems */
+    justify-content: space-between; /* Espacio entre ítems */
+    margin: 20px; /* Margen alrededor de la sección */
+}
+
+.item {
+    flex: 1; /* Cada ítem toma un ancho proporcional */
+    text-align: center; /* Centrar texto dentro de los ítems */
+    padding: 10px; /* Espaciado interno */
+}
+
+.item img {
+    max-width: 40px; /* Ancho máximo del logo */
+    height: auto; /* Mantener proporción de la imagen */
+    margin-bottom: 10px; /* Margen inferior entre imagen y texto */
+}
+
+.item h3 {
+    font-size: 1.5em; /* Tamaño de fuente del título */
+    margin: 10px 0; /* Margen superior e inferior del título */
+}
+
+.item p {
+    color: #555; /* Color del texto de la descripción */
+}
+
+
+
+
+
+
+
+.footer {
+    background-color: #333; /* Color de fondo del footer */
+    color: #fff; /* Color del texto */
+    padding: 20px; /* Espaciado interno */
+    text-align: center; /* Centrar texto */
+}
+
+.footer-content {
+    display: flex; /* Usar flexbox para organizar contenido */
+    justify-content: space-between; /* Espacio entre columnas */
+    align-items: center; /* Centrar verticalmente */
+    flex-wrap: wrap; /* Permitir que se envuelva en pantallas pequeñas */
+}
+
+.footer-logo img {
+    max-width: 100px; /* Ancho máximo del logo */
+    height: auto; /* Mantener proporción de la imagen */
+}
+
+.footer-info h3 {
+    margin: 10px 0; /* Margen para el título */
+}
+
+.footer-registration {
+    margin-top: 10px; /* Margen superior para la sección de registro */
+}
+
+.btn-register {
+    display: inline-block; /* Para que el botón tenga un contorno */
+    margin-top: 10px; /* Margen superior del botón */
+    padding: 10px 20px; /* Espaciado dentro del botón */
+    background-color: #ffcc00; /* Color amarillo del botón */
+    color: #333; /* Color del texto del botón */
+    text-decoration: none; /* Sin subrayado */
+    border-radius: 5px; /* Bordes redondeados */
+    transition: background-color 0.3s ease; /* Efecto suave al cambiar el color */
+}
+
+.btn-register:hover {
+    background-color: #ffd700; /* Color al pasar el ratón sobre el botón */
+}
